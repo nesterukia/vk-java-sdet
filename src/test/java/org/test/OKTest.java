@@ -1,5 +1,6 @@
 package org.test;
 
+import com.codeborne.selenide.Condition;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -11,8 +12,8 @@ public class OKTest {
     @Test
     public void OKSearchTest(){
         open("https://www.ok.ru");
-        $(By.name("st.query")).setValue("Автоматизация тестирования");
+        $(By.name("st.query")).setValue("Автоматизация");
         $(By.name("st.query")).pressEnter();
-        Assert.assertTrue(true);
+        $(By.name("18/ico_hobbies_18")).shouldHave(Condition.appear);
     }
 }
