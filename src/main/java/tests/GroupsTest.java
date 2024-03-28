@@ -1,3 +1,4 @@
+// Тестирование осуществления поиска по названию и подписки на группу из раздела Группы меню слева
 package tests;
 
 import com.codeborne.selenide.ElementsCollection;
@@ -15,25 +16,35 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class GroupsTest extends BaseTest{
 
-    private GroupsMenuPage groups = new GroupsMenuPage();
-    private String groupToFind = "Санкт-Петербургский политехнический университет";
-    private SelenideElement groupImage= $("img[alt='"+ groupToFind+"']");
+    private GroupsMenuPage groupsMenu = new GroupsMenuPage();
+    private String groupNameToFind = "Санкт-Петербургский политехнический университет";
+    private SelenideElement groupImage= $("img[alt='"+ groupNameToFind+"']");
+
     @BeforeEach
     public void init(){
         super.init();
+
+        // Предварительно производим логин и переходим в раздел "Группы"
         new LoginPage().signInAs(VALID_USER.getLogin(), VALID_USER.getPassword());
         open("/groups");
     }
 
     @Test
     public void groupsTest(){
+        // Осуществляем поиск группы по названию и сохраняем список результатов
+        ElementsCollection searchResults = groupsMenu.searchGroup(groupNameToFind);
 
-        ElementsCollection searchResults = groups.searchGroup(groupToFind);
-        GroupPage groupPage = groups.openGroupPageFromSearch(searchResults, groupToFind);
+        // Открываем страницу группы с заданым назвванием
+        GroupPage groupPage = groupsMenu.openGroupPageFromSearch(searchResults, groupNameToFind);
+
+        // Осуществляем подписку
         groupPage.follow();
 
-        groups = groupPage.openGroupsMenu();
-        groups.openMyGroupsSection();
+        // Открываем меню групп, открываем секцию "Мои группы"
+        groupsMenu = groupPage.openGroupsMenu();
+        groupsMenu.openMyGroupsSection();
+
+        // Проверяем, что отображается элемент-аватарка группы
         groupImage.shouldBe(visible);
 
     }
@@ -42,11 +53,13 @@ public class GroupsTest extends BaseTest{
     public void tearDown(){
         // Отписаться от группы
         open("/groups");
-        groups
+        groupsMenu
                 .openMyGroupsSection()
-                        .openMyGroup(groupToFind)
+                        .openMyGroup(groupNameToFind)
                                 .unfollow();
-        groups.logOut();
+
+        // Выходим из аккаунта
+        groupsMenu.logOut();
         super.tearDown();
     }
 }
