@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="700096bf-4693-47e6-84d0-e030dba67ae5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/TopMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/TopMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/GroupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GroupPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/GroupsMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GroupsMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/AvatarUploadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/AvatarUploadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/GroupsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/GroupsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +96,19 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -108,11 +128,31 @@
       <workItem from="1711100281203" duration="33000" />
       <workItem from="1711100700752" duration="1492000" />
       <workItem from="1711210623670" duration="13795000" />
-      <workItem from="1711373787945" duration="48980000" />
+      <workItem from="1711373787945" duration="49256000" />
+      <workItem from="1711640255262" duration="1169000" />
+      <workItem from="1711706624033" duration="12119000" />
+      <workItem from="1711781517744" duration="92000" />
+      <workItem from="1711889446572" duration="5862000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tests/AvatarUploadTest.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tests/GroupsTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

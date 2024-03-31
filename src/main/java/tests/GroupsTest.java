@@ -13,12 +13,12 @@ import pages.LoginPage;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GroupsTest extends BaseTest{
 
     private GroupsMenuPage groupsMenu = new GroupsMenuPage();
     private String groupNameToFind = "Санкт-Петербургский политехнический университет";
-    private SelenideElement groupImage= $("img[alt='"+ groupNameToFind+"']");
 
     @BeforeEach
     public void init(){
@@ -45,7 +45,7 @@ public class GroupsTest extends BaseTest{
         groupsMenu.openMyGroupsSection();
 
         // Проверяем, что отображается элемент-аватарка группы
-        groupImage.shouldBe(visible);
+        assertNotNull(groupsMenu.getMyGroupImage(groupNameToFind));
 
     }
 

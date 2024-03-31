@@ -1,28 +1,28 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.Keys;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 public class GroupsMenuPage extends BasePage{
-    private SelenideElement searchField = $(byXpath("//*[@id=\"hook_Block_UserGroupSearch2QueryBlock\"]/group-search-input/div/div/div/label/input"));
-    private SelenideElement searchPortal = $(byXpath("//*[@id=\"hook_Block_UserGroupsSearchPortal\"]/div"));
-    private SelenideElement myGroups = $(byXpath("//*[@id=\"hook_Block_MyGroupsTopBlock\"]/div/div[1]/h3/a"));
+    private SelenideElement searchInput = $(byXpath(".//input[@type='search']"));
+    private SelenideElement searchPortal = $(byXpath(".//*[@id='userGroupsSearchResultList']"));
+    private SelenideElement myGroups = $(byXpath(".//a[text()='Мои группы']"));
     public ElementsCollection searchGroup(String groupName){
-        String groupCardLocator = "#hook_Loader_UserGroupsSearchPortalLoader > div:nth-child(1)";
         //SelenideElement searchBtn
-        searchField
-                .setValue(groupName)
-                .click();
-        searchField
+        searchInput
+                .shouldBe(visible)
+                .sendKeys(groupName);
+        searchInput
                 .pressEnter();
-
-        return searchPortal.findAll(groupCardLocator);
+        ElementsCollection results = searchPortal.shouldBe(visible).findAll(byXpath(".//*[contains(@class,'group-big-card')]"));
+        return results;
     }
     public GroupPage openGroupPageFromSearch(ElementsCollection results, String groupName){
         SelenideElement groupToOpen = results.findBy(text(groupName));
@@ -43,5 +43,11 @@ public class GroupsMenuPage extends BasePage{
         SelenideElement groupImage = $("img[alt='"+ groupName+"']");
         groupImage.click();
         return new GroupPage();
+    }
+
+    public SelenideElement getMyGroupImage(String groupName){
+        String groupXPath = "img[@alt='" + groupName+"']";
+        SelenideElement groupImage = $(byXpath(groupXPath));
+        return groupImage;
     }
 }

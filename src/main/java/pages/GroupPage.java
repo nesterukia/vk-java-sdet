@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 public class GroupPage extends BasePage{
-    private SelenideElement followBtn = $(byXpath("//*[@id=\"hook_Block_AltGroupMainMenu\"]/ul/div/a"));
+    private SelenideElement followBtn = $(byXpath(".//*[@id=\"hook_Block_AltGroupMainMenu\"]/ul/div/a"));
     private SelenideElement statusBtn = $(byXpath("//*[@id=\"hook_Block_AltGroupMainMenu\"]/ul/div/div/span"));
 
     public void follow(){
@@ -28,7 +28,7 @@ public class GroupPage extends BasePage{
                 .shouldBe(visible)
                 .click();
 
-        SelenideElement quitButton = $(byXpath("//*[@id=\"hook_FormButton_submit\"]"));
+        SelenideElement quitButton = $(byXpath(".//*[@id='hook_FormButton_submit']"));
         quitButton
                 .shouldBe(visible)
                 .click();

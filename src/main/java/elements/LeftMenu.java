@@ -3,6 +3,7 @@ package elements;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import pages.GroupsMenuPage;
+import pages.PhotosMenuPage;
 import pages.PictureViewerPage;
 
 import java.io.File;
@@ -51,4 +52,9 @@ public class LeftMenu {
         return avatarPic.exists();
     }
 
+    public PhotosMenuPage openPhotosMenu() {
+        SelenideElement photosBtn = navigationBtns.findBy(text("Фото"));
+        photosBtn.click();
+        return new PhotosMenuPage();
+    }
 }

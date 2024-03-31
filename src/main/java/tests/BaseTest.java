@@ -10,7 +10,8 @@ import static com.codeborne.selenide.Selenide.open;
 
 abstract public class BaseTest {
 
-    protected final User VALID_USER = new User("technopol66", "technopolisPassword");
+    protected final User VALID_USER =
+            new User("technopol66 technopol66","technopol66", "technopolisPassword");
     public void setup(){
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";

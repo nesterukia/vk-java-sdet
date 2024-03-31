@@ -41,4 +41,8 @@ abstract public class BasePage {
         leftMenu.openGroupsMenu();
         return new GroupsMenuPage();
     }
+    public PhotosMenuPage openPhotosMenu(){
+        leftMenu.openPhotosMenu();
+        return new PhotosMenuPage();
+    }
 }

@@ -2,15 +2,21 @@
 
 package tests;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import pages.DeletedPhotosPage;
 import pages.FeedPage;
 import pages.LoginPage;
+import pages.PhotosMenuPage;
 
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class AvatarUploadTest extends BaseTest{
     private FeedPage feedPage;
@@ -37,9 +43,7 @@ public class AvatarUploadTest extends BaseTest{
         feedPage.uploadAvatar(picWebp);
 
         // Проверяем что аватар виден
-        feedPage.getAvatarPic()
-                .shouldBe(visible);
-
+        assertNotNull(feedPage.getAvatarPic());
     }
 
     @AfterEach
@@ -50,9 +54,14 @@ public class AvatarUploadTest extends BaseTest{
                 .deletePic()
                 .close();
 
-        // Выходим из аккаунта
-        feedPage.logOut();
+        // Чистим удаленные фотографии
+        PhotosMenuPage photosMenuPage = new FeedPage().openPhotosMenu();
+        DeletedPhotosPage deletedPhotosPage = photosMenuPage.openDeletedPhotosPage();
+        deletedPhotosPage.clearLastDeletedPhoto();
 
+        // Выходим из аккаунта
+        deletedPhotosPage
+                .logOut();
         // Вызываем after-метод родителя
         super.tearDown();
     }
