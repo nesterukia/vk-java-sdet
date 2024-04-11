@@ -2,33 +2,23 @@
 
 package tests;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.DeletedPhotosPage;
 import pages.FeedPage;
 import pages.LoginPage;
 import pages.PhotosMenuPage;
-
 import java.io.File;
-
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class AvatarUploadTest extends BaseTest{
+public class ProfilePictureUploadTest extends BaseTest{
     private FeedPage feedPage;
     private File picWebp = new File("src/pics/cat.webp");
 
     @BeforeEach
     public void init(){
         super.init();
-
         // Вход в систему с валидным пользователем
         feedPage = new LoginPage().signInAs(VALID_USER.getLogin(), VALID_USER.getPassword());
-
         // Если есть аватар, то удаляем
         if(feedPage.avatarIsSet()){
             feedPage.openAvatar()
@@ -38,12 +28,14 @@ public class AvatarUploadTest extends BaseTest{
     }
 
     @Test
-    public void photoUploadTest(){
+    @Tag("ProfilePictureTest")
+    @DisplayName("ProfilePictureUploadTest")
+    public void profilePictureUploadTest(){
         // Загружаем аватар из файла на компьютере
-        feedPage.uploadAvatar(picWebp);
+        feedPage.uploadProfilePicture(picWebp);
 
         // Проверяем что аватар виден
-        assertNotNull(feedPage.getAvatarPic());
+        assertNotNull(feedPage.getAvatarPic(), "Profile picture element should be visible.");
     }
 
     @AfterEach

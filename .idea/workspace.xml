@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="700096bf-4693-47e6-84d0-e030dba67ae5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" afterDir="false" />
+    <list default="true" id="700096bf-4693-47e6-84d0-e030dba67ae5" name="Changes" comment="stabilised tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Task" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/GroupSubscriptionFromSearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/elements/TopMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/TopMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/elements/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/GroupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GroupPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/GroupsMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GroupsMenuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/AvatarUploadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/AvatarUploadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/GroupsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/GroupsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/AvatarUploadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/ProfilePictureUploadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/GroupsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/LoginWithValidUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="homework-&lt;2&gt;" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,15 +60,17 @@
   "keyToString": {
     "JUnit.AvatarUploadTest.executor": "Run",
     "JUnit.GoogleTest.executor": "Run",
+    "JUnit.GroupSubscriptionFromSearchTest.executor": "Run",
     "JUnit.GroupsTest.executor": "Run",
     "JUnit.LoginTest.executor": "Run",
     "JUnit.OKTest.executor": "Run",
     "JUnit.PhotoUploadTest.executor": "Run",
     "JUnit.PhotoUploadTest.photoUploadTest.executor": "Debug",
+    "JUnit.ProfilePictureUploadTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "homework-<2>",
+    "git-widget-placeholder": "homework-3",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/seagull1994/IdeaProjects/vk-java-sdet/src/pics",
     "node.js.detected.package.eslint": "true",
@@ -132,27 +138,27 @@
       <workItem from="1711640255262" duration="1169000" />
       <workItem from="1711706624033" duration="12119000" />
       <workItem from="1711781517744" duration="92000" />
-      <workItem from="1711889446572" duration="5862000" />
+      <workItem from="1711889446572" duration="6234000" />
+      <workItem from="1712136011690" duration="733000" />
+      <workItem from="1712320238866" duration="82000" />
+      <workItem from="1712690617457" duration="31615000" />
     </task>
+    <task id="LOCAL-00001" summary="stabilised tests">
+      <option name="closed" value="true" />
+      <created>1711918807419</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711918807419</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/tests/AvatarUploadTest.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/tests/GroupsTest.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="stabilised tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="stabilised tests" />
   </component>
 </project>

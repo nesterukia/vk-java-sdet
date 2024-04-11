@@ -30,19 +30,20 @@ abstract public class BasePage {
     public LoginPage logOut(){
         return topMenu.logOut();
     }
-    public void uploadAvatar(File pic){
-        leftMenu.uploadAvatar(pic);
+    public void uploadProfilePicture(File pic){
+        leftMenu.uploadProfilePicture(pic);
     }
-
     public boolean avatarIsSet(){
         return leftMenu.avatarIsSet();
     }
     public GroupsMenuPage openGroupsMenu(){
-        leftMenu.openGroupsMenu();
-        return new GroupsMenuPage();
+        return leftMenu.openGroupsMenu();
     }
     public PhotosMenuPage openPhotosMenu(){
-        leftMenu.openPhotosMenu();
-        return new PhotosMenuPage();
+        return leftMenu.openPhotosMenu();
+    }
+
+    public String getUserCreds(){
+        return leftMenu.getUserCreds();
     }
 }

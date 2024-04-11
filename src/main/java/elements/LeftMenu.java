@@ -2,6 +2,7 @@ package elements;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 import pages.GroupsMenuPage;
 import pages.PhotosMenuPage;
 import pages.PictureViewerPage;
@@ -15,46 +16,59 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class LeftMenu {
-    private SelenideElement root = $(byXpath("//*[@id=\"layout-container\"]/aside/nav"));
-    private SelenideElement avatarPic = $(byXpath("//*[@id=\"viewImageLinkId\"]"));
-    private SelenideElement avatarUploadInput = $(byXpath("//*[@id=\"hook_Block_Avatar\"]/div/div/span/input"));
-
-    private ElementsCollection navigationBtns = $$("div[class='nav-side_i-w']");
+    private By rootLocator = byXpath(".//*[@area-label='Меню в левой колонке с разделами']");
+    private By profilePictureLocator = byXpath(".//*[@id='viewImageLinkId']");
+    private By profilePictureUploadInputLocator = byXpath(".//input[@name='photo']");
+    private By userPageBtn = byXpath(".//a[contains(@data-l, 'userPage')]/div");
+    private By photosPageBtn = byXpath(".//a[contains(@data-l, 'userPhotos')]/div");
+    private By groupsPageBtn = byXpath(".//a[contains(@data-l, 'userAltGroup')]/div");
 
     public SelenideElement getRoot(){
-        return root;
+        return $(rootLocator);
     }
 
     public SelenideElement getAvatarPic(){
-        return avatarPic;
+        return $(profilePictureLocator);
     }
 
     public PictureViewerPage openAvatar(){
-        avatarPic
+        $(profilePictureLocator)
                 .shouldBe(visible)
                 .click();
         return new PictureViewerPage();
     }
 
-    public void uploadAvatar(File pic){
-        avatarUploadInput.uploadFile(pic);
-        SelenideElement confirmBtn = $(byXpath("//*[@id=\"hook_Block_PopLayer\"]/div/change-user-avatar/div/div/div[2]/div[1]/div[3]/button[1]/span/span[1]"));
-        confirmBtn.shouldBe(visible).click();
+    public void uploadProfilePicture(File pic){
+        By setButtonLocator = byXpath(".//*[text()='Установить']");
+
+        $(profilePictureUploadInputLocator).uploadFile(pic);
+        $(setButtonLocator)
+                .shouldBe(visible.because("SetButton should be visible when picture is uploaded."))
+                .click();
     }
 
     public GroupsMenuPage openGroupsMenu(){
-        SelenideElement groupBtn = navigationBtns.findBy(text("Группы"));
-        groupBtn.click();
+        $(groupsPageBtn)
+                .shouldBe(visible.because("UserGroupsButton should be visible in LeftMenu"))
+                .click();
         return new GroupsMenuPage();
     }
 
     public boolean avatarIsSet(){
-        return avatarPic.exists();
+        return $(profilePictureLocator).exists();
     }
 
     public PhotosMenuPage openPhotosMenu() {
-        SelenideElement photosBtn = navigationBtns.findBy(text("Фото"));
-        photosBtn.click();
+        $(photosPageBtn)
+                .shouldBe(visible.because("UserPhotosButton should be visible in LeftMenu"))
+                .click();
         return new PhotosMenuPage();
+    }
+
+    public String getUserCreds(){
+        String userCreds = $(userPageBtn)
+                .shouldBe(visible.because("UserPageButton should be visible in LeftMenu"))
+                .getText();
+        return userCreds;
     }
 }
