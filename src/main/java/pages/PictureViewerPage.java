@@ -1,13 +1,10 @@
 package pages;
 
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class PictureViewerPage extends BasePage {
 
@@ -19,6 +16,10 @@ public class PictureViewerPage extends BasePage {
     private By deleteBtn = byXpath(".//span[text()='Удалить фотографию']/..");
 
     private By commentForm = byXpath(".//*[contains(@class, 'comment-form')]");
+
+    public PictureViewerPage(){
+        checkPage();
+    }
 
     @Override
     public void checkPage() {

@@ -18,6 +18,9 @@ public class GroupPage extends BasePage implements LeftMenu, TopMenu {
     private By groupName = byXpath(".//*[@class='group-name']");
     private By middleColumnMenu = byXpath(".//*[@aria-label='Меню в средней колонке']");
 
+    public GroupPage(){
+        checkPage();
+    }
     @Override
     public void checkPage(){
         $(followBtn).shouldBe(visible.because("FollowButton should be visible in GroupPage."));

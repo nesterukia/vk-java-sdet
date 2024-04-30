@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="700096bf-4693-47e6-84d0-e030dba67ae5" name="Changes" comment="changed locators, added annotations and fixed asserts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Task" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Task" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elements/TopMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/TopMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/FeedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FeedPage.java" afterDir="false" />
@@ -17,8 +14,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/GroupSubscriptionFromSearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/GroupSubscriptionFromSearchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/LoginWithValidUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/LoginWithValidUserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homework-3-fixed" />
+        <entry key="$PROJECT_DIR$" value="homework-3-overrideIssue" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,7 +63,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "homework-3-overrideIssue",
+    "git-widget-placeholder": "homework-3-fixedIssues",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/seagull1994/IdeaProjects/vk-java-sdet/src/pics",
     "node.js.detected.package.eslint": "true",

@@ -12,8 +12,11 @@ public class PhotosMenuPage extends BasePage implements LeftMenu, TopMenu {
     private By deletedPhotosTab = byXpath(".//*[@title='Удалённые фотографии']");
     private By createPhotoAlbumBtn = byXpath(".//*[@data-l='t,create-photo-album']");
     private By uploadFileBtn = byXpath(".//*[@data-l='t,upload-file']");
-    private By albumSearch = byXpath(".//input[placeholder='Поиск по альбомам']");
+    private By albumSearch = byXpath(".//input[@placeholder='Поиск по альбомам']");
 
+    public PhotosMenuPage(){
+        checkPage();
+    }
     @Override
     public void checkPage() {
         $(createPhotoAlbumBtn).shouldBe(visible.because("CreatePhotoAlbumBtn should be visible in PhotosMenuPage"));

@@ -15,6 +15,10 @@ public class FeedPage extends BasePage implements LeftMenu, TopMenu {
     By hobbiesTab = byXpath(".//*[@data-l='t,to_hobbies']");
 
     By feedList = byXpath(".//*[contains(@class, 'feed-list')]");
+
+    public FeedPage(){
+        checkPage();
+    }
     @Override
     public void checkPage() {
         $(momentsTab).shouldBe(visible.because("MomentsTab should be visible in FeedPage."), Duration.ofSeconds(1));

@@ -15,6 +15,11 @@ public class GroupsMenuPage extends BasePage implements LeftMenu, TopMenu {
 
     private By deleteSearchHistoryButton = byXpath(".//*[@class='groups-catalog-header']//button[contains(@class,'button-clean')]");
 
+    public GroupsMenuPage(){
+        checkPage();
+    }
+
+    @Override
     public void checkPage(){
         $(searchInput).shouldBe(visible.because("SearchInput should be visible in GroupsMenuPage."));
         $(createGroupButton).shouldBe(visible.because("CreateGroupButton should be visible in GroupsMenuPage."));

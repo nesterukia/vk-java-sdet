@@ -1,6 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.SelenideElement;
 import elements.LeftMenu;
 import elements.TopMenu;
 import org.openqa.selenium.By;
@@ -13,6 +12,9 @@ public class DeletedPhotosPage extends BasePage implements LeftMenu, TopMenu {
     private By lastDeletedPhotosCard = byXpath(".//*[contains(@class, 'grid-item')]");
     private By albumHeaderTitle = byXpath(".//h2[contains(@class, 'album-header-title') and text()='Удалённые фотографии']");
 
+    public DeletedPhotosPage(){
+        checkPage();
+    }
     @Override
     public void checkPage() {
         $(lastDeletedPhotosCard).shouldBe(visible.because("LastDeletedCard should be visible in DeletedPhotosPage."));
