@@ -20,7 +20,10 @@ public class LoginWithValidUserTest extends BaseTest{
     public void loginWithValidUserTest(){
         loginPage = new LoginPage();
         // Производим логин с логином и паролем валидного пользователя
-        feedPage = loginPage.signInAs(VALID_USER.getLogin(), VALID_USER.getPassword());
+        feedPage = loginPage
+                .typeLogin(VALID_USER.getLogin())
+                .typePassword(VALID_USER.getPassword())
+                .submitSignIn();
 
         // Проверяем что имя и фамилия пользователя совпадают с исходными
         assertEquals(feedPage.getUserCreds(), VALID_USER.getCreds(), "User creds should be equal to VALID_USER creds.");

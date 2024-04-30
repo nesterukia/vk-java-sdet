@@ -9,15 +9,23 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class PictureViewerPage {
+public class PictureViewerPage extends BasePage {
 
-    private  By widgetBtns = byXpath(".//*[@id = 'hook_Block_ActionsPLLB']");
+    private By widgetBtns = byXpath(".//*[@id = 'hook_Block_ActionsPLLB']");
     private By otherFeaturesBtn =
             byXpath(".//button[contains(@class, 'action-button-container') and contains(@class, 'button-clean')]");
     private By closeBtn =
             byXpath("//button[contains(@class, 'panel_close')]");
-    private By deleteBtn = byXpath(".//span[text()='Удалить фотографию']/..");;
+    private By deleteBtn = byXpath(".//span[text()='Удалить фотографию']/..");
 
+    private By commentForm = byXpath(".//*[contains(@class, 'comment-form')]");
+
+    @Override
+    public void checkPage() {
+        $(commentForm).shouldBe(visible.because("CommentForm should be visible in PictureViewerPage."));
+        $(widgetBtns).shouldBe(visible.because("WidgetBtns should be visible in PictureViewerPage."));
+        $(closeBtn).shouldBe(visible.because("CloseBtn should be visible in PictureViewerPage."));
+    }
     public PictureViewerPage deletePic(){
         $(widgetBtns).shouldBe(visible.because("Every widget should be visible in PictureViewerPage."));
         $(otherFeaturesBtn)

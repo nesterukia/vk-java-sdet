@@ -27,12 +27,12 @@ public class GroupSubscriptionFromSearchTest extends BaseTest{
         groupsMenuPage.searchGroup(GROUP_FOR_SEARCH);
         groupPage = groupsMenuPage.openGroupPageFromSearch(GROUP_FOR_SEARCH);
         groupPage.follow();
-        sleep(1000);
         assertTrue(groupPage.isFollowed(), "MessageButton should be visible after subscription.");
     }
     @AfterEach
     public void tearDown(){
         refresh();
+        groupPage = new GroupPage();
         groupPage.unfollow();
         open("/groups");
         groupsMenuPage = new GroupsMenuPage();

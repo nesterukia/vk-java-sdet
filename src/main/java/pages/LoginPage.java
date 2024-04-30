@@ -2,24 +2,22 @@ package pages;
 
 import org.openqa.selenium.By;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 
 
-public class LoginPage {
+public class LoginPage extends BasePage{
     private By loginField = byXpath(".//*[@id='field_email']");
     private By passwordField = byXpath(".//*[@id='field_password']");
     private By signInButton = byXpath(".//input[@value='Войти в Одноклассники']");
-
-    public LoginPage(){
-        checkPage();
-    }
-
+    @Override
     public void checkPage(){
-        $(loginField).shouldBe(visible.because("LoginField should be visible in LoginPage"));
-        $(passwordField).shouldBe(visible.because("PasswordField should be visible in LoginPage"));
-        $(signInButton).shouldBe(visible.because("SignInButton should be visible in LoginPage"));
+        $(loginField).shouldBe(visible.because("LoginField should be visible in LoginPage"), Duration.ofSeconds(1));
+        $(passwordField).shouldBe(visible.because("PasswordField should be visible in LoginPage"), Duration.ofSeconds(1));
+        $(signInButton).shouldBe(visible.because("SignInButton should be visible in LoginPage"), Duration.ofSeconds(1));
     }
     public LoginPage typeLogin(String login){
         $(loginField)
