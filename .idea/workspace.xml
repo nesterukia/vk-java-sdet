@@ -5,15 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="700096bf-4693-47e6-84d0-e030dba67ae5" name="Changes" comment="changed locators, added annotations and fixed asserts">
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/LeftMenuOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/PictureTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/elements/PictureViewerCommentsSection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/PhotoAlbumPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/AddDescriptionToPhotoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/PhotosMenuUploadAllPictureFormatsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pics/cat.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pics/cat.heic" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pics/cat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pics/cat.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/LeftMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DeletedPhotosPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/FeedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FeedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/GroupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GroupPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/GroupsMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/GroupsMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PhotosMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/PictureViewerPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/LoginWithValidUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/LoginWithValidUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/ProfilePictureUploadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/ProfilePictureUploadTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +36,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homework-3-overrideIssue" />
+        <entry key="$PROJECT_DIR$" value="homework-3-fixedIssues" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,6 +65,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.AddDescriptionToPhotoTest.executor": "Run",
     "JUnit.AvatarUploadTest.executor": "Run",
     "JUnit.GoogleTest.executor": "Run",
     "JUnit.GroupSubscriptionFromSearchTest.executor": "Run",
@@ -59,11 +75,13 @@
     "JUnit.OKTest.executor": "Run",
     "JUnit.PhotoUploadTest.executor": "Run",
     "JUnit.PhotoUploadTest.photoUploadTest.executor": "Debug",
+    "JUnit.PhotosMenuUploadAllPictureFormatsTest.executor": "Run",
+    "JUnit.PhotosMenuUploadPictureTest.executor": "Run",
     "JUnit.ProfilePictureUploadTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "homework-3-fixedIssues",
+    "git-widget-placeholder": "homework-4",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/seagull1994/IdeaProjects/vk-java-sdet/src/pics",
     "node.js.detected.package.eslint": "true",
@@ -137,6 +155,8 @@
       <workItem from="1712690617457" duration="32025000" />
       <workItem from="1712953915670" duration="63000" />
       <workItem from="1714385321505" duration="7299000" />
+      <workItem from="1714809987992" duration="184000" />
+      <workItem from="1715715041862" duration="21970000" />
     </task>
     <task id="LOCAL-00001" summary="stabilised tests">
       <option name="closed" value="true" />
@@ -154,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712834809017</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changed locators, added annotations and fixed asserts">
+      <option name="closed" value="true" />
+      <created>1714488874960</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714488874960</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,16 +192,5 @@
     <MESSAGE value="stabilised tests" />
     <MESSAGE value="changed locators, added annotations and fixed asserts" />
     <option name="LAST_COMMIT_MESSAGE" value="changed locators, added annotations and fixed asserts" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/elements/LeftMenu.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

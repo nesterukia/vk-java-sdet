@@ -1,12 +1,13 @@
 package pages;
 
+import elements.PictureViewerCommentsSection;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
-public class PictureViewerPage extends BasePage {
+public class PictureViewerPage extends BasePage implements PictureViewerCommentsSection {
 
     private By widgetBtns = byXpath(".//*[@id = 'hook_Block_ActionsPLLB']");
     private By otherFeaturesBtn =

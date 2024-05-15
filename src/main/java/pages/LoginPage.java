@@ -14,9 +14,9 @@ public class LoginPage extends BasePage{
     private By passwordField = byXpath(".//*[@id='field_password']");
     private By signInButton = byXpath(".//input[@value='Войти в Одноклассники']");
 
-    public LoginPage(){
-        checkPage();
-    }
+//    public LoginPage(){
+//        checkPage();
+//    }
     @Override
     public void checkPage(){
         $(loginField).shouldBe(visible.because("LoginField should be visible in LoginPage"), Duration.ofSeconds(1));

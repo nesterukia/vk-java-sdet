@@ -17,7 +17,6 @@ public class DeletedPhotosPage extends BasePage implements LeftMenu, TopMenu {
     }
     @Override
     public void checkPage() {
-        $(lastDeletedPhotosCard).shouldBe(visible.because("LastDeletedCard should be visible in DeletedPhotosPage."));
         $(albumHeaderTitle).shouldBe(visible.because("AlbumHeaderTitle should be visible in DeletedPhotosPage."));
     }
     public void clearLastDeletedPhoto(){

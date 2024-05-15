@@ -2,6 +2,7 @@
 
 package tests;
 
+import elements.LeftMenuOption;
 import org.junit.jupiter.api.*;
 import pages.DeletedPhotosPage;
 import pages.FeedPage;
@@ -28,7 +29,7 @@ public class ProfilePictureUploadTest extends BaseTest{
     }
 
     @Test
-    @Tag("ProfilePictureTest")
+    @Tag("photos")
     @DisplayName("ProfilePictureUploadTest")
     public void profilePictureUploadTest(){
         // Загружаем аватар из файла на компьютере
@@ -47,7 +48,8 @@ public class ProfilePictureUploadTest extends BaseTest{
                 .close();
 
         // Чистим удаленные фотографии
-        PhotosMenuPage photosMenuPage = new FeedPage().openPhotosMenu();
+        new FeedPage().openMenu(LeftMenuOption.PHOTOS);
+        PhotosMenuPage photosMenuPage = new PhotosMenuPage();
         DeletedPhotosPage deletedPhotosPage = photosMenuPage.openDeletedPhotosPage();
         deletedPhotosPage.clearLastDeletedPhoto();
 
